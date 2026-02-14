@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+
+{% block css %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}"> 
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+
+{% endblock %}
+
+{% block main %}
+<div class="container">
+  <div class="top">
+    <img src="{{url_for('static', filename='5.jpg')}}" alt="Profile picture">
+
+    <div class="text">
+      <h1>Dana Archer</h1>
+      <p>@ntanaMarie</p>
+      <p>Kingston, Jamaica</p>
+      <p>Joined {{ date_joined }}</p>
+
+    </div>
+
+
+  </div>
+  <div class="bottom">
+    
+    <p id="body">Hi there! I’m someone who finds joy in the little creative corners of life — whether that’s practicing Japanese, sketching new characters, or listening to my favourite tunes. I love sharing the things that bring me joy! </p>
+
+    <div class="meta-data">
+      <p class="numbers">7</p>
+      <p class="numbers">100</p>
+      <p class="numbers">250</p>
+      <p class="description">Posts</p>
+      <p class="description">Following</p>
+      <p class="description">Followers</p>
+
+    </div>
+
+    <button id="follow">Follow</button>
+  </div>
+</div>
+{% endblock %}
